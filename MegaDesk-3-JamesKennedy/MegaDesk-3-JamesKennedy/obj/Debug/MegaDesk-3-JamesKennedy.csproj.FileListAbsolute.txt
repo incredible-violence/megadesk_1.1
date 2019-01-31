@@ -1,0 +1,12 @@
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\bin\Debug\MegaDesk-3-JamesKennedy.exe.config
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\bin\Debug\MegaDesk-3-JamesKennedy.exe
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\bin\Debug\MegaDesk-3-JamesKennedy.pdb
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\obj\Debug\MegaDesk-3-JamesKennedy.csprojAssemblyReference.cache
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\obj\Debug\MegaDesk_3_JamesKennedy.AddQuote.resources
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\obj\Debug\MegaDesk_3_JamesKennedy.DisplayQuote.resources
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\obj\Debug\MegaDesk_3_JamesKennedy.MainMenu.resources
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\obj\Debug\MegaDesk_3_JamesKennedy.Properties.Resources.resources
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\obj\Debug\MegaDesk-3-JamesKennedy.csproj.GenerateResource.cache
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\obj\Debug\MegaDesk-3-JamesKennedy.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\obj\Debug\MegaDesk-3-JamesKennedy.exe
+D:\Documents\GitHub\Repositories\cit_365\MegaDesk-3-JamesKennedy\MegaDesk-3-JamesKennedy\obj\Debug\MegaDesk-3-JamesKennedy.pdb
