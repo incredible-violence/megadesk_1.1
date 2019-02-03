@@ -10,3 +10,4 @@ D:\Documents\GitHub\Repositories\megadesk_1.1\MegaDesk_1.1_JamesKennedy\MegaDesk
 D:\Documents\GitHub\Repositories\megadesk_1.1\MegaDesk_1.1_JamesKennedy\MegaDesk_1.1_JamesKennedy\obj\Debug\MegaDesk_1.1_JamesKennedy.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\Repositories\megadesk_1.1\MegaDesk_1.1_JamesKennedy\MegaDesk_1.1_JamesKennedy\obj\Debug\MegaDesk-3-JamesKennedy.exe
 D:\Documents\GitHub\Repositories\megadesk_1.1\MegaDesk_1.1_JamesKennedy\MegaDesk_1.1_JamesKennedy\obj\Debug\MegaDesk-3-JamesKennedy.pdb
+D:\Documents\GitHub\Repositories\megadesk_1.1\MegaDesk_1.1_JamesKennedy\MegaDesk_1.1_JamesKennedy\obj\Debug\MegaDesk_3_JamesKennedy.SearchQuotes.resources

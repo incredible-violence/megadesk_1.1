@@ -44,8 +44,8 @@
             this.rushBool = new System.Windows.Forms.CheckBox();
             this.submitBtn = new System.Windows.Forms.Button();
             this.customerBox = new System.Windows.Forms.TextBox();
-            this.materialBox = new System.Windows.Forms.ListBox();
             this.rushBox = new System.Windows.Forms.ListBox();
+            this.materialComboBox = new System.Windows.Forms.ComboBox();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -235,22 +235,6 @@
             this.customerBox.Size = new System.Drawing.Size(201, 20);
             this.customerBox.TabIndex = 17;
             // 
-            // materialBox
-            // 
-            this.materialBox.Font = new System.Drawing.Font("Hack", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialBox.FormattingEnabled = true;
-            this.materialBox.ItemHeight = 22;
-            this.materialBox.Items.AddRange(new object[] {
-            "Oak",
-            "Laminate",
-            "Pine",
-            "Rosewood",
-            "Veneer"});
-            this.materialBox.Location = new System.Drawing.Point(107, 171);
-            this.materialBox.Name = "materialBox";
-            this.materialBox.Size = new System.Drawing.Size(123, 26);
-            this.materialBox.TabIndex = 18;
-            // 
             // rushBox
             // 
             this.rushBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -265,13 +249,21 @@
             this.rushBox.Size = new System.Drawing.Size(63, 24);
             this.rushBox.TabIndex = 19;
             // 
+            // materialComboBox
+            // 
+            this.materialComboBox.FormattingEnabled = true;
+            this.materialComboBox.Location = new System.Drawing.Point(107, 176);
+            this.materialComboBox.Name = "materialComboBox";
+            this.materialComboBox.Size = new System.Drawing.Size(91, 21);
+            this.materialComboBox.TabIndex = 20;
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(515, 209);
+            this.Controls.Add(this.materialComboBox);
             this.Controls.Add(this.rushBox);
-            this.Controls.Add(this.materialBox);
             this.Controls.Add(this.customerBox);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.rushBool);
@@ -305,7 +297,7 @@
         private System.Windows.Forms.CheckBox rushBool;
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.TextBox customerBox;
-        private System.Windows.Forms.ListBox materialBox;
         private System.Windows.Forms.ListBox rushBox;
+        private System.Windows.Forms.ComboBox materialComboBox;
     }
 }

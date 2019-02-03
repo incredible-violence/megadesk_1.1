@@ -11,16 +11,8 @@ namespace MegaDesk_3_JamesKennedy
         public int Width { get; set; }
         public int Depth { get; set; }
         public int NumberOfDrawers { get; set; }
-        public string DesktopMaterial;
-
-        public enum EnumTest
-        {
-            Oak = 200,
-            Laminate = 100,
-            Pine = 50,
-            Rosewood = 300,
-            Veneer = 125
-        }
+        public DesktopMaterial DesktopMaterial { get; set; }
+        
 
         // Constraints
         public const int MINWIDTH = 24;
@@ -29,5 +21,14 @@ namespace MegaDesk_3_JamesKennedy
         public const int MINDEPTH = 12;
         public const int MINDRAWERS = 0;
         public const int MAXDRAWERS = 7;
+    }
+
+    public enum DesktopMaterial
+    {
+        Oak = 200,
+        Laminate = 100,
+        Pine = 50,
+        Rosewood = 300,
+        Veneer = 125
     }
 }

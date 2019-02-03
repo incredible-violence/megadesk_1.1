@@ -11,7 +11,7 @@ namespace MegaDesk_3_JamesKennedy
     {
         #region Object member variables
         private string CustomerName { get; set; } 
-        private DateTime QuoteDate = DateTime.Today;
+        public DateTime QuoteDate = DateTime.Today;
         private Desk newDesk = new Desk();
         private int Rush { get; set; }
         public int QuoteCost { get; set; }
@@ -38,7 +38,7 @@ namespace MegaDesk_3_JamesKennedy
         public DeskQuote(int width, 
             int depth, 
             int drawers, 
-            string material,
+            DesktopMaterial material,
             bool isRush,
             string rushDays, 
             string customer)
@@ -54,13 +54,13 @@ namespace MegaDesk_3_JamesKennedy
             // calculated variables
             SurfaceArea = newDesk.Width * newDesk.Depth;
             Rush = RushCost(isRush, SurfaceArea, RushDaysConvert(rushDays));
-            QuoteCost = CalculateQuoteTotal(SurfaceArea, Rush, newDesk.DesktopMaterial);
+            QuoteCost = CalculateQuoteTotal(SurfaceArea, Rush, (int)material);
         }
 
         // aggregate costs into one number
-        public int CalculateQuoteTotal(int surfaceArea, int rush, string deskMat)
+        public int CalculateQuoteTotal(int surfaceArea, int rush, int matCost)
         {
-            return PRICE_BASE + DrawerCost() + SurfaceMaterialCost(deskMat) 
+            return PRICE_BASE + DrawerCost() + matCost +
                 + rush + SurfaceAreaCost(surfaceArea);
         }
 
@@ -68,27 +68,6 @@ namespace MegaDesk_3_JamesKennedy
         private int DrawerCost()
         {
             return newDesk.NumberOfDrawers * PRICE_DRAWER; 
-        }
-
-        // calculate cost for surface material
-        private int SurfaceMaterialCost(string mat)
-        {
-            switch (mat)
-            {
-                case "Oak":
-                    return 200;
-                case "Laminate":
-                    return 100;
-                case "Pine":
-                    return 50;
-                case "Rosewood":
-                    return 300;
-                case "Veneer":
-                    return 125;
-                default:
-                    break;
-            }
-            return 1;
         }
 
         // convert rushDays string into int

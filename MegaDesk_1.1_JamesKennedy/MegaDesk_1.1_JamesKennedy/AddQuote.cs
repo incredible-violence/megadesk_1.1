@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +13,16 @@ namespace MegaDesk_3_JamesKennedy
 {
     public partial class AddQuote : Form
     {
+        DesktopMaterial mats;
+
         public AddQuote()
         {
             InitializeComponent();
+            // list to populate comboBox
+            List<DesktopMaterial> MatBoxList = Enum.GetValues(typeof(DesktopMaterial))
+                .Cast<DesktopMaterial>().ToList();
 
+            materialComboBox.DataSource = MatBoxList;
         }
 
         private void AddQuote_Load(object sender, EventArgs e)
@@ -32,26 +39,62 @@ namespace MegaDesk_3_JamesKennedy
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            // get input from various boxes
-            int width = int.Parse(widthBox.Text);
-            int depth = int.Parse(depthBox.Text);
-            int drawers = int.Parse(drawerBox.Text);
-            string mats = materialBox.Text;
-            bool isRush = rushBool.Checked;
-            string rushD = rushBox.Text;
-            string customer = customerBox.Text;
+            try
+            {
+                // get input from various boxes
+                int width = int.Parse(widthBox.Text);
+                int depth = int.Parse(depthBox.Text);
+                int drawers = int.Parse(drawerBox.Text);
+                mats = (DesktopMaterial)materialComboBox.SelectedValue;
+                bool isRush = rushBool.Checked;
+                string rushD = rushBox.Text;
+                string customer = customerBox.Text;
 
-            // plug into DeskQuote object
-            DeskQuote quote = new DeskQuote(width, depth, drawers, mats, isRush, rushD, customer);
+                // plug into DeskQuote object, calculates cost
+                DeskQuote quote = new DeskQuote(width, depth, drawers, mats, isRush, rushD, customer);
 
-            // show desk cost
-            MessageBox.Show("Cost of Desk: " + quote.QuoteCost);
+                // create quote record
+                string record = customer + ", "
+                    + quote.QuoteDate + ", "
+                    + "Width: " + width + ", "
+                    + "Depth: " + depth + ","
+                    + "Drawers: " + drawers + ", "
+                    + "Material: " + mats + ","
+                    + "Rush Order: " + isRush + ", "
+                    + "Rush Days: " + rushD + ", "
+                    + "Total Cost: " + quote.QuoteCost;
+                // show desk cost
+                MessageBox.Show("Cost of Desk: " + quote.QuoteCost);
 
-            // add quote to list and return to main menu
-            var mainMenu = (MainMenu)Tag;
-            mainMenu.Quotes.Add(quote);
-            mainMenu.Show();
-            Close();
+                // add quote to file
+                string quoteFile = @"quotes.txt";
+                if (!File.Exists(quoteFile))
+                {
+                    File.Create(quoteFile);
+                    using (var sw = new StreamWriter(quoteFile, true))
+                    {
+                        sw.WriteLine(record);
+                    }
+                }
+                else
+                {
+                    using (var sw = new StreamWriter(quoteFile, true))
+                    {
+                        sw.WriteLine(record);
+                    }
+                }
+
+                // return to main menu
+                var mainMenu = (MainMenu)Tag;
+                mainMenu.Show();
+                Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            
         }
 
         private void widthBox_Validating(object sender, CancelEventArgs e)
