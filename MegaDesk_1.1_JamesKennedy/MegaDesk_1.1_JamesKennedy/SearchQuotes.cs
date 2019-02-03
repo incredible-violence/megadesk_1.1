@@ -13,9 +13,16 @@ namespace MegaDesk_3_JamesKennedy
 {
     public partial class SearchQuotes : Form
     {
+        DesktopMaterial mats;
+
         public SearchQuotes()
         {
             InitializeComponent();
+            // list to populate comboBox
+            List<DesktopMaterial> MatBoxList = Enum.GetValues(typeof(DesktopMaterial))
+                .Cast<DesktopMaterial>().ToList();
+
+            MatComboBox.DataSource = MatBoxList;
         }
 
         private void SearchQuotes_Load(object sender, EventArgs e)
@@ -36,7 +43,8 @@ namespace MegaDesk_3_JamesKennedy
                         // string[] value = sr.ReadLine().Split(',');
                         if (sr.ReadLine().Contains(MaterialSelected))
                         {
-                            // add to output ListView                            
+                            // add to output ListView 
+                            ResultsView.Columns.Add(sr.ReadLine());
                         }
                     }
                 }
